@@ -254,6 +254,7 @@ h1, h2, h3, h4, h5, h6 {
 .intro__explore,
 .technology .swiper-pagination,
 .subtitle,
+.destination__error,
 .destination [class*=__number],
 .intro__text,
 .info__text {
@@ -306,18 +307,18 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.intro__explore, .technology .swiper-pagination, .subtitle {
+.intro__explore, .technology .swiper-pagination, .subtitle, .destination__error {
   font-size: 2rem;
   line-height: 115.625%; /* 37/32 */
   letter-spacing: 0;
 }
 @media (max-width: 768px) {
-  .intro__explore, .technology .swiper-pagination, .subtitle {
+  .intro__explore, .technology .swiper-pagination, .subtitle, .destination__error {
     font-size: calc(18px + 23.8 * (100vw - 320px) / 1440);
   }
 }
 @media (min-width: 769px) {
-  .intro__explore, .technology .swiper-pagination, .subtitle {
+  .intro__explore, .technology .swiper-pagination, .subtitle, .destination__error {
     font-size: calc(18px + 14 * 100vw / 1440);
   }
 }
@@ -738,6 +739,18 @@ a[class*=__link]:focus a:focus {
 }
 .destination__container {
   padding: 0 0.9375rem;
+}
+.destination__error {
+  color: 255;
+  border: 1px solid pink;
+  margin-bottom: 1.5rem;
+  border-radius: 30px;
+  -webkit-transition: opacity 0.5s ease 0s;
+  transition: opacity 0.5s ease 0s;
+  opacity: 0;
+}
+.destination__error--show {
+  opacity: 1;
 }
 .destination__image {
   -ms-flex-preferred-size: 539px;
