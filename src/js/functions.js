@@ -1,6 +1,6 @@
 export async function getDestinationData(){
     try{
-        const data = await fetch('../src/json/destination.json');
+        const data = await fetch('src/json/destination.json');
         const response = await data.json();
         return response;
     }catch(error){
@@ -9,7 +9,7 @@ export async function getDestinationData(){
 }
 export async function getCrewData(){
     try{
-        const data = await fetch('../src/json/crew.json');
+        const data = await fetch('src/json/crew.json');
         const response = await data.json();
         return response;
     }catch(error){
@@ -18,7 +18,7 @@ export async function getCrewData(){
 }
 export async function getTechnologyData(){
     try{
-        const data = await fetch('../src/json/technology.json');
+        const data = await fetch('src/json/technology.json');
         const response = await data.json();
         return response;
     }catch(error){
