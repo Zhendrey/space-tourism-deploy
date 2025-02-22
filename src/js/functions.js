@@ -4,9 +4,6 @@ export async function getDestinationData(){
         const response = await data.json();
         return response;
     }catch(error){
-        const errorEl = document.createElement('.destination__error');
-        errorEl.textContent = 'An error occured while fetching the data from the server' + error.message;
-        error.classList.add('show');
         console.error('error', error.message);
     }
 }

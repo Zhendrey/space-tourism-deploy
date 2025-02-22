@@ -10,6 +10,12 @@ async function destinationInit() {
 
 const data = await getDestinationData();
 
+if(!data){
+    const errorEl = document.createElement('.destination__error');
+    errorEl.textContent = 'An error occured while fetching the data from the server' + error.message;
+    errorEl.classList.add('show');
+}else{
+
 //DOM VARIABLES
 const destinationImage = document.querySelector(".destination__image img");
 const destinationBody = document.querySelector(".destination__body");
@@ -48,6 +54,7 @@ destinationPlanets.addEventListener("click", function(event){
         );
     }
 })
+}
 
 }
 destinationInit();
