@@ -747,10 +747,18 @@ a[class*=__link]:focus a:focus {
   border-radius: 30px;
   -webkit-transition: opacity 0.5s ease 0s;
   transition: opacity 0.5s ease 0s;
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
   opacity: 0;
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
 }
 .destination__error--show {
   opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 .destination__image {
   -ms-flex-preferred-size: 539px;
