@@ -57,13 +57,13 @@ explore.addEventListener("click", function(e){
 window.addEventListener("resize", function(){
     for (let i = 0; i < mainSections.length; i++) {
         if(window.innerWidth < 769 &&  window.innerWidth > 376){
-            backgroundHome[i].src = `../../assets/${currentPages[i].textContent.toLowerCase()}/background-${currentPages[i].textContent.toLowerCase()}-tablet.jpg`;
+            backgroundHome[i].src = `assets/${currentPages[i].textContent.toLowerCase()}/background-${currentPages[i].textContent.toLowerCase()}-tablet.jpg`;
             backgroundHome[i].alt = `background-${currentPages[i].textContent.toLowerCase()}-tablet`;
         }else if(window.innerWidth < 376){
-            backgroundHome[i].src = `../../assets/${currentPages[i].textContent.toLowerCase()}/background-${currentPages[i].textContent.toLowerCase()}-mobile.jpg`;
+            backgroundHome[i].src = `assets/${currentPages[i].textContent.toLowerCase()}/background-${currentPages[i].textContent.toLowerCase()}-mobile.jpg`;
             backgroundHome[i].alt = `background-${currentPages[i].textContent.toLowerCase()}-mobile`;
         }else{
-            backgroundHome[i].src = `../../assets/${currentPages[i].textContent.toLowerCase()}/background-${currentPages[i].textContent.toLowerCase()}-desktop.jpg`;
+            backgroundHome[i].src = `assets/${currentPages[i].textContent.toLowerCase()}/background-${currentPages[i].textContent.toLowerCase()}-desktop.jpg`;
             backgroundHome[i].alt = `background-${currentPages[i].textContent.toLowerCase()}-desktop`;
         }
     }
@@ -73,13 +73,13 @@ window.addEventListener("resize", function(){
 //!SEPARATE CONDITIONS
 for (let i = 0; i < backgroundHome.length; i++) {
     if(window.innerWidth < 769 &&  window.innerWidth > 376){
-        backgroundHome[i].src = `../../assets/${currentPages[i].textContent.toLowerCase()}/background-${currentPages[i].textContent.toLowerCase()}-tablet.jpg`;
+        backgroundHome[i].src = `assets/${currentPages[i].textContent.toLowerCase()}/background-${currentPages[i].textContent.toLowerCase()}-tablet.jpg`;
         backgroundHome[i].alt = `background-${currentPages[i].textContent.toLowerCase()}-tablet`;
     }else if(window.innerWidth < 376){
-        backgroundHome[i].src = `../../assets/${currentPages[i].textContent.toLowerCase()}/background-${currentPages[i].textContent.toLowerCase()}-mobile.jpg`;
+        backgroundHome[i].src = `assets/${currentPages[i].textContent.toLowerCase()}/background-${currentPages[i].textContent.toLowerCase()}-mobile.jpg`;
         backgroundHome[i].alt = `background-${currentPages[i].textContent.toLowerCase()}-mobile`;
     }else{
-        backgroundHome[i].src = `../../assets/${currentPages[i].textContent.toLowerCase()}/background-${currentPages[i].textContent.toLowerCase()}-desktop.jpg`;
+        backgroundHome[i].src = `assets/${currentPages[i].textContent.toLowerCase()}/background-${currentPages[i].textContent.toLowerCase()}-desktop.jpg`;
         backgroundHome[i].alt = `background-${currentPages[i].textContent.toLowerCase()}-desktop`;
     }
 }

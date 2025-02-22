@@ -1,5 +1,7 @@
 import { getTechnologyData, dynamicPading, dynamicTop } from "./functions.js";
 
+
+async function technologyInit() {
 const data = await getTechnologyData();
 
 //SCREEN WIDTHS
@@ -29,3 +31,5 @@ data.forEach((technology, index) => {
         image.src = window.innerWidth > tablet ? technology.desktopImage : technology.tabletImage;
     })
 });
+}
+technologyInit();

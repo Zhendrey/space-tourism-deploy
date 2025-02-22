@@ -5,6 +5,9 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 
+async function crewInit(params) {
+    
+
 const data = await getCrewData();
 
 //DOM VARIABLES
@@ -68,3 +71,6 @@ const swiperTechnology = new Swiper('.swiper_technology', {
         }
     }
 })
+
+}
+crewInit();

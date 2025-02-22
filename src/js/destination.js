@@ -4,6 +4,10 @@ import {
     increaseOpacity
     } from "./functions.js";
 //VARIABLES
+
+async function destinationInit() {
+    
+
 const data = await getDestinationData();
 
 //DOM VARIABLES
@@ -44,3 +48,6 @@ destinationPlanets.addEventListener("click", function(event){
         );
     }
 })
+
+}
+destinationInit();
