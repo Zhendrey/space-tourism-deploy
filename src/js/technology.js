@@ -2,8 +2,7 @@ import { getTechnologyData, dynamicPading, dynamicTop } from "./functions.js";
 
 
 async function technologyInit() {
-const data = await getTechnologyData();
-
+    const data = await getTechnologyData();
 //SCREEN WIDTHS
 const laptopL = 1440;
 const tablet = 768;
@@ -17,7 +16,11 @@ const pagination = document.querySelector(".technology .swiper-pagination");
 dynamicPading(content, laptopL, tablet, parseInt(getComputedStyle(content).paddingLeft), 15);
 dynamicTop(pagination, tablet, 360, parseInt(getComputedStyle(pagination).top), 180);
 
-
+if(!data){
+    const errorEl = document.querySelector('.error');
+    errorEl.classList.add('error--show');
+}
+else{
 data.forEach((technology, index) => {
     const name = technologySlides[index].querySelector(".slide__name");
     const description = technologySlides[index].querySelector(".slide__text");
@@ -31,5 +34,6 @@ data.forEach((technology, index) => {
         image.src = window.innerWidth > tablet ? technology.desktopImage : technology.tabletImage;
     })
 });
+    }
 }
 technologyInit();

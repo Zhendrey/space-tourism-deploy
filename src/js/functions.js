@@ -1,27 +1,33 @@
 export async function getDestinationData(){
     try{
-        const data = await fetch('destination.json');
+        const data = await fetch('.destination.json');
         const response = await data.json();
         return response;
     }catch(error){
+        const errorEl = document.querySelector('.destination .error');
+        errorEl.classList.add('error--show');
         console.error('error', error.message);
     }
 }
 export async function getCrewData(){
     try{
-        const data = await fetch('crew.json');
+        const data = await fetch('.crew.json');
         const response = await data.json();
         return response;
     }catch(error){
+        const errorEl = document.querySelector('.crew .error');
+        errorEl.classList.add('error--show');
         console.error('error', error.message);
     }
 }
 export async function getTechnologyData(){
     try{
-        const data = await fetch('technology.json');
+        const data = await fetch('.technology.json');
         const response = await data.json();
         return response;
     }catch(error){
+        const errorEl = document.querySelector('.technology .error');
+        errorEl.classList.add('error--show');
         console.error('error', error.message);
     }
 }

@@ -10,11 +10,6 @@ async function destinationInit() {
 
 const data = await getDestinationData();
 
-if(!data){
-    const errorEl = document.createElement('.destination__error');
-    errorEl.textContent = 'An error occured while fetching the data from the server' + error.message;
-    errorEl.classList.add('show');
-}else{
 
 //DOM VARIABLES
 const destinationImage = document.querySelector(".destination__image img");
@@ -33,7 +28,7 @@ const pressedPlanets = [0];
 destinationPlanets.addEventListener("click", function(event){
     const targetElem = event.target.closest(".destination__planet");
     const targetId = targetElem.id;
-    if(targetElem){
+    if(targetElem && data){
         pressedPlanets.push(Number(targetId));
         const previousPlanet = pressedPlanets[pressedPlanets.length - 2];
         destinationPlanet[previousPlanet].classList.remove("active");
@@ -52,9 +47,10 @@ destinationPlanets.addEventListener("click", function(event){
             distanceNumber,
             travelNumber
         );
+    }else{
+        const errorEl = document.querySelector('.error');
+        errorEl.classList.add('error--show');
     }
 })
-}
-
 }
 destinationInit();

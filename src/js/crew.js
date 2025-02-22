@@ -6,14 +6,11 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 
 async function crewInit(params) {
-    
 
 const data = await getCrewData();
 
 //DOM VARIABLES
 const crewSlides = document.querySelectorAll(".crew .slide");
-
-
 
 data.forEach((crew, index) => {
     const qualification = crewSlides[index].querySelector(".slide__subtitle");
@@ -71,6 +68,5 @@ const swiperTechnology = new Swiper('.swiper_technology', {
         }
     }
 })
-
 }
 crewInit();

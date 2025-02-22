@@ -1,4 +1,14 @@
 @use 'reset';
+.crew{
+    & .error{
+        @media (max-width: 48em) {
+            margin-bottom: 2.5rem;            
+        }
+        @media (min-width: 48.0625em) {
+            margin-top: 2.5rem;            
+        }
+    }
+}
 .swiper{
     &_crew{
         & img.background{
